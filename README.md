@@ -6,4 +6,4 @@ Forklift adalah mobil berjalan atau kendaraan yang memiliki 2 garpu yang bisa di
 
 ![Screen Shot](https://www.indotara.co.id/inliners/BAGIAN-BAGIAN-FORKLIFT-DAN-FUNGSINYA.png)
 
-[Fork] adalah bagian utama dari forklift yang fungsinya ialah untuk menopang dan untuk membawa serta mengangkat barang atau beban, Fork terbuat dari besi panjang dan lurus dengan panjang standart 1070mm dan bisa di tambah fork extension untuk bisa lebih panjang lagi.Meletakkan beban yang akan di angkat diatas fork harus diperhatikan untuk mengatur lebar fork,perlu diketahui juga dimensi beban dan kapasitas berat beban.
+* **Fork** adalah bagian utama dari forklift yang fungsinya ialah untuk menopang dan untuk membawa serta mengangkat barang atau beban, Fork terbuat dari besi panjang dan lurus dengan panjang standart 1070mm dan bisa di tambah fork extension untuk bisa lebih panjang lagi.Meletakkan beban yang akan di angkat diatas fork harus diperhatikan untuk mengatur lebar fork,perlu diketahui juga dimensi beban dan kapasitas berat beban.
