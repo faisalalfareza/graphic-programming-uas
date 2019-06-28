@@ -12,3 +12,6 @@ Dan untuk perkiraan atau rencana model 3d dari forklift sendiri adalah [seperti 
 * **Mast** merupakan bagian penting dan utama dari forklift, karena antara fork dan mast adalah satu kesatuan supaya forklift berjalan secara fungsinya. Mast sendiri terbuat dan terdiri dari dua buah besi yang tebal yang di antaranya terdapat komponen hidroulik sistem yang dalam satu kesatuannya berfungsi sebagai pengangkat atau menurunkan barang. Pada dasarnya mast ini fungsinya untuk lifting dan tilting.
 * **Overhead Guard** adalah atap atau pelindung untuk operator forklift yang fungsinya adalah melindungi operator jika saat melakukan pekerjaannya dalam mengangkat barang dan barang tersebut jatuh tidak langsung mengenai operator forklift dan jika di modifikasi bisa juga sebagai pelindung operator dari terik matahari dan hujan.
 * **Counter Weight** merupakan bagian dari forklift yang fungsingnya menyeimbangkan beban yang diangkat dengan forklift itu sendiri, yang letaknya berada di belakang yang berlawanan dengan fork. Sehingga kesetabilan forklift dan keseimbangannya terjaga.
+
+## Referensi
+* **[Objek Forklift Model 3D]**(https://grabcad.com/library/tag/forklift)
