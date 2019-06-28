@@ -14,4 +14,4 @@ Dan untuk perkiraan atau rencana model 3d dari forklift sendiri adalah [seperti 
 * **Counter Weight** merupakan bagian dari forklift yang fungsingnya menyeimbangkan beban yang diangkat dengan forklift itu sendiri, yang letaknya berada di belakang yang berlawanan dengan fork. Sehingga kesetabilan forklift dan keseimbangannya terjaga.
 
 ## Referensi
-* **[Objek Forklift Model 3D]**(https://grabcad.com/library/tag/forklift)
+* [Objek Forklift Model 3D](https://grabcad.com/library/tag/forklift)
