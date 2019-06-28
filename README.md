@@ -5,6 +5,7 @@ Proyek ini bertujuan untuk membuat pendekatan kecil untuk pemrograman 3D dengan 
 Forklift adalah mobil berjalan atau kendaraan yang memiliki 2 garpu yang bisa digunakan untuk mengangakat pallet. Biasanya barang diletakkan di atas pallet, baru kemudian barang dipindahkan atau diangkat. Forklift (juga disebut lift truck, jitney, fork truck, fork hoist, atau forklift truck) adalah truk industri yang digunakan untuk mengangkat dan memindahkan material jarak pendek. 
 
 ![Screen Shot](https://www.indotara.co.id/inliners/BAGIAN-BAGIAN-FORKLIFT-DAN-FUNGSINYA.png)
+
 Dan untuk perkiraan atau rencana model 3d dari forklift sendiri adalah [seperti pada contoh ini](https://www.google.com/search?q=forklift+opengl+3d&tbm=isch&ved=2ahUKEwjs2ojW5ozjAhXQEysKHU7wCwsQ2-cCegQIABAC&oq=forklift+opengl+3d&gs_l=mobile-gws-wiz-img.12...1130793.1136618..1137785...0.0..0.248.2021.0j5j5......0....1.........0j0i67j0i30.eGKlOP6Z-_k&ei=1VsWXaycDdCnrAHO4K9Y&client=ms-android-samsung-gj-rev1&prmd=isvn&safe=strict).
 
 * **Fork** adalah bagian utama dari forklift yang fungsinya ialah untuk menopang dan untuk membawa serta mengangkat barang atau beban, Fork terbuat dari besi panjang dan lurus dengan panjang standart 1070mm dan bisa di tambah fork extension untuk bisa lebih panjang lagi. Meletakkan beban yang akan di angkat diatas fork harus diperhatikan untuk mengatur lebar fork, perlu diketahui juga dimensi beban dan kapasitas berat beban.
