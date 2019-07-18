@@ -14,5 +14,16 @@ Dan untuk perkiraan atau rencana model 3d dari forklift sendiri adalah [seperti 
 * **Overhead Guard** adalah atap atau pelindung untuk operator forklift yang fungsinya adalah melindungi operator jika saat melakukan pekerjaannya dalam mengangkat barang dan barang tersebut jatuh tidak langsung mengenai operator forklift dan jika di modifikasi bisa juga sebagai pelindung operator dari terik matahari dan hujan.
 * **Counter Weight** merupakan bagian dari forklift yang fungsingnya menyeimbangkan beban yang diangkat dengan forklift itu sendiri, yang letaknya berada di belakang yang berlawanan dengan fork. Sehingga kesetabilan forklift dan keseimbangannya terjaga.
 
+## Cara Menjalankan 
+* **Dependencies** This program requires the Python OpenGL bindings (PyOpenGL) and the Python Imaging library (PIL).
+* **Run** Usage: 
+```
+python main.py
+```
+
 ## Referensi
 * [Objek Forklift Model 3D](https://grabcad.com/library/tag/forklift)
+* [Switch Environment in Python](https://docs.anaconda.com/anaconda/user-guide/tasks/switch-environment/)
+* [Installing Python OpenGL  (PyOpenGL)](https://anaconda.org/anaconda/pyopengl)
+* [Installing Python Imaging library (PIL)](https://anaconda.org/anaconda/pil)
+* [Installing FreeGlut / GLUT DLL's in Python](https://anaconda.org/conda-forge/freeglut)
