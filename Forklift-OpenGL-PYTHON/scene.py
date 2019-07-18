@@ -1,10 +1,3 @@
-"""
-The scene module for assignment2
-
-@author Alex Westphal (9819 6992)
-@version 13Sept-2010
-"""
-
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
@@ -17,7 +10,7 @@ from random import random, randint
 listID = 0
 
 class Scene(object):
-	"""A scene for display via OpenGL."""
+	"""Adegan untuk ditampilkan lewat OpenGL."""
 
 	def __init__(self):
 		"""Constructor"""
@@ -26,7 +19,7 @@ class Scene(object):
 		self.init_stacks()
 
 	def init_stacks(self):
-		"""Setup the initial state of the crate stacks."""
+		"""Atur kondisi awal tumpukan peti."""
 		objects = [
 			(lambda: glutSolidSphere(0.4,20,10), True),
 			(lambda: glutSolidTorus(0.15,0.3,20,20), True),
@@ -52,9 +45,9 @@ class Scene(object):
 		
 
 	def glInit(self):
-		"""The View is expected to call this during OpenGL pipeline
-		   initialisation. It sets up any once-only pipeline states that the
-		   model wishes to use"""
+		"""View diharapkan untuk memanggil ini selama inisialisasi pipa OpenGL. 
+		Ini mengatur setiap saluran pipa hanya menyatakan 
+		bahwa model ingin menggunakan"""
 
 		glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE)
 		glEnable(GL_COLOR_MATERIAL)
@@ -66,7 +59,7 @@ class Scene(object):
 
 
 	def glDisplay(self):
-		"""Output the entire scene to the OpenGL pipeline."""
+		"""Mengeluarkan seluruh adegan ke pipa/saluran OpenGL."""
 		
 		glLightfv(GL_LIGHT0, GL_POSITION, (-20,10,-19,0))
 		
@@ -95,7 +88,10 @@ class Scene(object):
 		self.forklift.display()
 
 	def mini_forklift(self):
-		"""Draw a miniature forklift (sized to fit in a crate)."""
+		"""
+			Draw a miniature forklift (sized to fit in a crate).
+			Menggambarkan forklift miniatur (ukurannya pas dengan peti)
+		"""
 		glPushMatrix()
 		glTranslatef(0,-0.45,0)
 		glScalef(0.25,0.25,0.25)
@@ -112,28 +108,40 @@ class Scene(object):
 		glPopMatrix()
 
 	def dodecahedron(self):
-		"""Draw a dodecahedron (sized to fit in a crate)."""
+		"""
+			Draw a dodecahedron (sized to fit in a crate).
+			Menggambarkan dodecahedron (ukurannya pas di peti)
+		"""
 		glPushMatrix()
 		glScalef(0.25,0.25,0.25)
 		glutSolidDodecahedron()
 		glPopMatrix()
 
 	def octahedron(self):
-		"""Draw an octahedron (sized to fit in a crate)."""
+		"""
+			Draw an octahedron (sized to fit in a crate).
+			Menggambarkan octahedron (ukurannya pas di peti)
+		"""
 		glPushMatrix()
 		glScalef(0.4,0.4,0.4)
 		glutSolidOctahedron()
 		glPopMatrix()
 
 	def tetrahedron(self):
-		"""Draw a tetrahedron (sized to fit in a crate)."""
+		"""
+			Draw a tetrahedron (sized to fit in a crate).
+			Menggambar tetrahedron (ukurannya pas dengan peti).	
+		"""
 		glPushMatrix()
 		glScalef(0.4,0.4,0.4)
 		glutSolidTetrahedron()
 		glPopMatrix()
 
 	def icosahedron(self):
-		"""Draw an icosahedron (sized to fit in a crate)."""
+		"""
+			Draw an icosahedron (sized to fit in a crate).
+			Menggambarkan icosahedron (ukurannya pas di peti)
+		"""
 		glPushMatrix()
 		glScalef(0.4,0.4,0.4)
 		glutSolidIcosahedron()
@@ -144,7 +152,10 @@ class Scene(object):
 
 
 class CrateStack(object):
-	"""2D Stack of Crates"""
+	"""
+		2D Stack of Crates
+		2D tumpukan peti
+	"""
 	
 	def __init__(self, width, height, angle):
 		"""Initialise the stack.

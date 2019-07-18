@@ -1,10 +1,3 @@
-"""
-The main module for assignment2.
-
-@author Alex Westphal 9819 6992
-@version 12-Oct-2010
-"""
-
 from __future__ import division
 from OpenGL.GL import *
 from OpenGL.GLU import *
@@ -16,7 +9,7 @@ from scheduler import Scheduler
 from animation import Animation
 
 class Controller(object):
-	"""The Controller for the OpenGL application."""
+	"""Controller untuk aplikasi OpenGL."""
 
 	MAX_X_DRAG_ROTATION = 120
 	MAX_Y_DRAG_ROTATION = 90
@@ -41,7 +34,7 @@ class Controller(object):
 
 
 	def mouseButtonFunc(self, button, state, x, y):
-		"""The GLUT mouseFunc handler. This is used to rotate the entire scene."""
+		"""The GLUT mouseFunc handler. Ini digunakan untuk memutar seluruh adegan."""
 		if button == GLUT_LEFT:
 			self.mouseX = x
 			self.mouseY = y
@@ -49,7 +42,7 @@ class Controller(object):
 
 
 	def mouseMotionFunc(self, x, y):
-		"""The GLUT mouse motion handler. This is used to rotate the entire scene."""
+		"""The GLUT mouse motion handler. Ini digunakan untuk memutar seluruh adegan."""
 		if self.leftButtonState == GLUT_DOWN:
 			(_, _, w, h) = glGetFloat(GL_VIEWPORT)
 			y_rot = self.MAX_X_DRAG_ROTATION * (x - self.mouseX) / w # Compute horizontal rotation
@@ -89,14 +82,14 @@ class Controller(object):
 
 
 	def run(self):
-		"""Start the app (just runs the GLUT main loop)"""
+		"""Mulai aplikasi (hanya menjalankan GLUT main loop)"""
 		glutMainLoop()
 
 
 #==============================================================================
 
-# The main body just creates the model, view and controller and wires them up
-# (if the file is executed as the main program rather than just imported).
+# Main body hanya menciptakan model, tampilan dan pengontrol dan menghubungkan mereka
+# (jika file dieksekusi sebagai program utama daripada hanya diimpor).
 
 if __name__ == "__main__":
 

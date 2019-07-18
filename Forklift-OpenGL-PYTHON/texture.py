@@ -1,10 +1,3 @@
-"""
-The texture module for assignment2.
-
-@author Alex Westphal 9819 6992
-@version 12-Oct-2010
-"""
-
 from __future__ import division
 from OpenGL.GL import *
 from OpenGL.GLU import *
@@ -20,7 +13,10 @@ def readImage(path):
 
 
 class Surround(object):
-    """The courtyard scene for experimenting with texture mapping."""
+    """
+        The courtyard scene for experimenting with texture mapping.
+        Adegan halaman untuk bereksperimen dengan pemetaan tekstur.
+    """
 
     
     TEX_FLOOR_REPS = 4
@@ -28,11 +24,14 @@ class Surround(object):
     WALL_HEIGHT = 15
 
     def glInit(self):
-        """Set up OpenGL pipeline stuff needed by this particular scene"""
+        """
+            Set up OpenGL pipeline stuff needed by this particular scene
+            Siapkan hal-hal saluran pipa OpenGL yang dibutuhkan oleh adegan khusus ini
+        """
         
         # Left Wall Texture
         self.wall_1_id = glGenTextures(1)
-        (w,h,pattern) = readImage("pan_1.jpg")
+        (w,h,pattern) = readImage("assets/left_wall_texture_I.jpg")
         glBindTexture(GL_TEXTURE_2D, self.wall_1_id)
         gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGB, w, h, GL_RGB, GL_UNSIGNED_BYTE, pattern)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR)
@@ -43,7 +42,7 @@ class Surround(object):
         
         # Front Wall Texture
         self.wall_2_id = glGenTextures(1)
-        (w,h,pattern) = readImage("pan_2.jpg")
+        (w,h,pattern) = readImage("assets/front_wall_texture.jpg")
         glBindTexture(GL_TEXTURE_2D, self.wall_2_id)
         gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGB, w, h, GL_RGB, GL_UNSIGNED_BYTE, pattern)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR)
@@ -54,7 +53,7 @@ class Surround(object):
         
         # Right Wall Texture
         self.wall_3_id = glGenTextures(1)
-        (w,h,pattern) = readImage("pan_3.jpg")
+        (w,h,pattern) = readImage("assets/right_wall_texture.jpg")
         glBindTexture(GL_TEXTURE_2D, self.wall_3_id)
         gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGB, w, h, GL_RGB, GL_UNSIGNED_BYTE, pattern)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR)
@@ -65,7 +64,7 @@ class Surround(object):
         
         # Left Wall Texture
         self.wall_4_id = glGenTextures(1)
-        (w,h,pattern) = readImage("pan_4.jpg")
+        (w,h,pattern) = readImage("assets/left_wall_texture_II.jpg")
         glBindTexture(GL_TEXTURE_2D, self.wall_4_id)
         gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGB, w, h, GL_RGB, GL_UNSIGNED_BYTE, pattern)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR)
@@ -77,7 +76,7 @@ class Surround(object):
         
         # Floor Texture
         self.floorTextureID = glGenTextures(1)
-        (w,h,pattern) = readImage("scree.tga")
+        (w,h,pattern) = readImage("assets/floor_texture.tga")
         glBindTexture(GL_TEXTURE_2D, self.floorTextureID)
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE, pattern)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)
@@ -195,11 +194,16 @@ class Surround(object):
 
 
     def glDisplay(self):
-        """Output the entire scene to the OpenGL pipeline.
+        """
+        Output the entire scene to the OpenGL pipeline.
+        Mengeluarkan seluruh adegan ke pipa OpenGL
         
         This method is expected to be called by a View object, after the
         model view matrix has been set up for an appropriate view and the
         various buffers cleared.
+        Metode ini diharapkan dipanggil oleh objek tampilan, setelah 
+        matriks tampilan model telah diatur untuk tampilan yang sesuai 
+        dan berbagai buffer dihapus.
         """
         glEnable(GL_TEXTURE_2D)
         glColor3f(1,1,1)

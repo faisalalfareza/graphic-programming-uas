@@ -1,9 +1,3 @@
-"""
-The animation module for assignment2.
-
-@author Alex Westphal 9819 6992
-@version 12-Oct-2010
-"""
 from collections import deque
 from random import randint
 from math import sin,cos,radians
