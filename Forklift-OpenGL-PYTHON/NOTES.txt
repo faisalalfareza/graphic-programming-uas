@@ -1,4 +1,11 @@
+Yang harus diinstall untuk menjalankan:
 1. https://docs.anaconda.com/anaconda/user-guide/tasks/switch-environment/
 2. https://anaconda.org/anaconda/pyopengl
 3. https://anaconda.org/anaconda/pil
 4. https://anaconda.org/conda-forge/freeglut
+
+Cara Menjalankan:
+1. Masuk pada direktori project, lalu aktifkan environment python 2 dengan cara:
+   "conda activate py2"
+2. Lalu jalankan program python 2 dengan:
+   "python main.py"

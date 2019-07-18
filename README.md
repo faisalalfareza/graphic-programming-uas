@@ -15,8 +15,10 @@ Dan untuk perkiraan atau rencana model 3d dari forklift sendiri adalah [seperti 
 * **Counter Weight** merupakan bagian dari forklift yang fungsingnya menyeimbangkan beban yang diangkat dengan forklift itu sendiri, yang letaknya berada di belakang yang berlawanan dengan fork. Sehingga kesetabilan forklift dan keseimbangannya terjaga.
 
 ## Cara Menjalankan 
-**Dependencies** Proram ini membutuhkan Python OpenGL (PyOpenGL) dan Python Imaging library (PIL).
-**Run** Usage: 
+__Dependencies__:
+Proram ini membutuhkan Python OpenGL (PyOpenGL) dan Python Imaging library (PIL).
+
+__Run__ Usage: 
 ```
 python main.py
 ```
