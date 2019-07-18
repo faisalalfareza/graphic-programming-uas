@@ -31,7 +31,7 @@ class Surround(object):
         
         # Left Wall Texture
         self.wall_1_id = glGenTextures(1)
-        (w,h,pattern) = readImage("assets/left_wall_texture_I.jpg")
+        (w,h,pattern) = readImage("assets/others/hangar_4_texture.jpg")
         glBindTexture(GL_TEXTURE_2D, self.wall_1_id)
         gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGB, w, h, GL_RGB, GL_UNSIGNED_BYTE, pattern)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR)
@@ -42,7 +42,7 @@ class Surround(object):
         
         # Front Wall Texture
         self.wall_2_id = glGenTextures(1)
-        (w,h,pattern) = readImage("assets/front_wall_texture.jpg")
+        (w,h,pattern) = readImage("assets/others/hangar_4_texture.jpg")
         glBindTexture(GL_TEXTURE_2D, self.wall_2_id)
         gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGB, w, h, GL_RGB, GL_UNSIGNED_BYTE, pattern)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR)
@@ -53,7 +53,7 @@ class Surround(object):
         
         # Right Wall Texture
         self.wall_3_id = glGenTextures(1)
-        (w,h,pattern) = readImage("assets/right_wall_texture.jpg")
+        (w,h,pattern) = readImage("assets/others/hangar_4_texture.jpg")
         glBindTexture(GL_TEXTURE_2D, self.wall_3_id)
         gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGB, w, h, GL_RGB, GL_UNSIGNED_BYTE, pattern)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR)
@@ -64,7 +64,7 @@ class Surround(object):
         
         # Left Wall Texture
         self.wall_4_id = glGenTextures(1)
-        (w,h,pattern) = readImage("assets/left_wall_texture_II.jpg")
+        (w,h,pattern) = readImage("assets/others/hangar_4_texture_flip.jpg")
         glBindTexture(GL_TEXTURE_2D, self.wall_4_id)
         gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGB, w, h, GL_RGB, GL_UNSIGNED_BYTE, pattern)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR)

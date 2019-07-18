@@ -6,7 +6,10 @@ from math import sin,cos,sqrt, radians
 #==============================================================================
 
 class View(object):
-    """ A View object provides a view of a scene."""
+    """ 
+        A View object provides a view of a scene.
+        Objek tampilan memberikan tampilan adegan.
+    """
     
     VIEW_MODE_FOLLOW = 0
     VIEW_MODE_GLOBAL = 1
@@ -18,7 +21,10 @@ class View(object):
     
     def __init__(self, scene, eye_point, look_at, view_up=(0,1,0),
                  field_of_view=40, near=0.1, far=100, aspectRatio=1):
-        """Initialise the view, with lots of common default parameters"""
+        """
+            Initialise the view, with lots of common default parameters
+            Inisialisasi tampilan, dengan banyak parameter standar umum
+        """
         self.scene = scene
         self.eye_point = tuple(eye_point)
         self.look_at = tuple(look_at)
@@ -34,17 +40,17 @@ class View(object):
         
         self.camera_position = [0,0,0]
         
-        #Initialise GLUT and create a window
+        # Initialise GLUT and create a window (Inisialisasi GLUT dan buat jendela)
         
         glutInit(sys.argv)
         glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH)
         glutInitWindowSize(500, 501)
         glutInitWindowPosition(0, 0)
-        glutCreateWindow("Assignment 2")
+        glutCreateWindow("Forklift OpenGL - Python")
         
-        # Set up the OpenGL engine into a simple basic state
+        # Set up the OpenGL engine into a simple basic state (Menyiapkan mesin OpenGL menjadi kondisi dasar yang sederhana)
         
-        glClearColor( 0.95, 0.95, 0.95, 1 ) # Background colour			       
+        glClearColor( 0.95, 0.95, 0.95, 1 ) # Background colour	(Background berwarna)		       
         glEnable(GL_DEPTH_TEST)
         glEnable(GL_LIGHTING)
         glEnable(GL_LIGHT0)
@@ -53,17 +59,22 @@ class View(object):
         glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE)
         glEnable(GL_COLOR_MATERIAL)
         
-        # Lastly let the scene set any OpenGL state it requires
+        # Lastly let the scene set any OpenGL state it requires (Terakhir biarkan adegan mengatur keadaan OpenGL yang diperlukan)
         
         self.scene.glInit()
 
 
     def reshape(self, width, height ):
-        """ Reshape function, called whenever user resizes window.
+        """ 
+            Reshape function, called whenever user resizes window.
+            Fungsi membentuk kembali, dipanggil setiap kali pengguna mengubah ukuran jendela
 
             This function is expected to be called directly by OpenGL, as
             a consequence of a setup call of the form
-            glutReshapeFunc(view.reshape)."""
+            glutReshapeFunc(view.reshape).
+            Fungsi ini diharapkan akan dipanggil langsung oleh OpenGL, 
+            sebagai konsekuensi dari panggilan setup dari form glutReshapeFunc (view.reshape)
+        """
     
         glViewport(0, 0, width, height)
         self.width = width
@@ -72,13 +83,19 @@ class View(object):
         
         
     def incYRotation(self, theta):
-        """Add theta degrees to the current x-rotation angle of the scene"""
+        """
+            Add theta degrees to the current x-rotation angle of the scene.
+            Tambahkan derajat theta ke sudut rotasi x saat ini dari pemandangan.
+        """
         self.modal_y_angle[self.view_mode] += theta
         if self.view_mode == self.VIEW_MODE_INSIDE:
             self.modal_y_angle[self.view_mode] = min(max(self.modal_y_angle[self.view_mode], -50),50)
         
     def incXRotation(self, theta):
-        """Add theta degrees to to the current y-rotation angle of the scene"""
+        """
+            Add theta degrees to to the current y-rotation angle of the scene.
+            Tambahkan derajat theta ke sudut rotasi y saat ini dari pemandangan.
+        """
         self.modal_x_angle[self.view_mode] += theta
         self.modal_x_angle[self.view_mode] = min(max(self.modal_x_angle[self.view_mode], 0),80)
     
@@ -99,7 +116,10 @@ class View(object):
             self.view_mode = self.VIEW_MODE_FOLLOW
             
     def display(self):
-        """Display the scene with the current viewing parameters"""
+        """
+            Display the scene with the current viewing parameters.
+            Tampilkan adegan dengan parameter tampilan saat ini.
+        """
         glMatrixMode( GL_PROJECTION )
         glLoadIdentity( )
         gluPerspective(self.modal_fov[self.view_mode], self.aspect, self.near, self.far)
@@ -122,8 +142,6 @@ class View(object):
             glTranslate((pos_x*cos(theta) - pos_z*sin(theta)), 0, (pos_x*sin(theta) + pos_z*cos(theta)))
             glTranslatef(0,-0.5,8.3)
             glRotatef(180-angle, 0,1,0)
-            
-            
         
         
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)  # Clear frame buffer
